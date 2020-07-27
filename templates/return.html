@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <form action="return_book" method="post" class="mark">
+        {% csrf_token %}
+        <input type="text" name="book" placeholder="book.."><br>
+        <input type="Submit">
+    </form>
+
+
+    <div class="alert-danger">
+        {% for message in messages %}
+        <h3 class="vTextField"> {{ message }}</h3>
+        {% endfor %}
+    </div>
+{% endblock %}

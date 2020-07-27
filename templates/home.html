@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <div style="text-align: left;font-size: 40px;color: #1b1e21; font-family: 'American Typewriter';width: 74%;height: auto;background-color: #9fcdff">
+         <div style="left:50%; font-size: 40px;color: firebrick; font-family: Impact;height: auto;background-color: #9fcdff;">
+            <h1 class="mark"><u>This is the Home Page</u></h1><br>
+        </div>
+        <p class="text-info">
+            -> In this Library Management System Project<br>
+            -> here what you can do: <br>
+            <ul >
+                <li>
+                    You can take the book from the Library
+                </li>
+                <li>
+                    You can return the book to Library
+                </li>
+            </ul>
+        <p class="text-danger">PS :</p> <p class="text-info">-> Only Admin can add new Book, or generate the due for late return</p>
+        <p class="text-info">-> Please login as Admin to add book and generate fine!</p>
+        </p>
+    </div>
+{% endblock %}

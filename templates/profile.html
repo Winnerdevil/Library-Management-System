@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+
+        <div style="text-align: left;font-size: 40px;color: #1b1e21; font-family: 'American Typewriter';width: 74%;height: auto;background-color: #9fcdff">
+            <div style="left:50%; font-size: 40px;color: firebrick; font-family: Impact;height: auto;background-color: #9fcdff;">
+                <h1 class="mark"><u>Profile</u></h1><br>
+            </div>
+            <div>
+                <table cellpadding="3" border="3"align="center" class="table-danger">
+                    <tr class="border-bottom btn-warning font-weight-bold text-danger">
+                        <td>Field</td>
+                        <td>Descriptions</td>
+                    </tr>
+                    <tr >
+                        <td>Name :</td>
+                        <td>{{ user.first_name }} {{ user.last_name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Contact :</td>
+                        <td>{{ contact }}</td>
+                    </tr>
+                    <tr>
+                        <td>Address :</td>
+                        <td>{{ address }}</td>
+                    </tr>
+                    <tr>
+                        <td>Due :</td>
+                        <td>{{ due }} Rs</td>
+                    </tr>
+                    <tr>
+                        <td>Books You have :</td>
+                        <td>
+                            {% for bval in books %}
+                                {{ bval }}<br>
+                            {% endfor %}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <div style="text-align: left;font-size: 40px;color: #1b1e21; font-family: 'American Typewriter';width: 74%;height: auto;background-color: #9fcdff">
+        <div style="left:50%; font-size: 40px;color: firebrick; font-family: Impact;height: auto;background-color: #9fcdff;">
+            <h1 class="mark"><u>Available Books</u></h1><br>
+        </div>
+    <table border="4px" align="center" class="table-active table-bordered">
+    <tr class="border-bottom btn-warning font-weight-bold text-danger">
+        <td>ID</td>
+        <td>Book Name</td>
+        <td>Number of Book</td>
+        <td></td>
+    </tr>
+    {% for field in Field %}
+        <tr>
+            <td align="center">{{ field.id }}</td>
+            <td align="center">{{ field.book_name }}</td>
+            <td align="center">{{ field.number_of_book }}</td>
+            <td><a href="{% url 'edit' pk=field.pk mode='sub' submit=0 %}" class="btn btn-warning btn-md" role="button">+</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+    <br><br>
+        <div style="left:50%; font-size: 40px;color: firebrick; font-family: Impact;height: auto;background-color: #9fcdff;">
+            <h1 class="mark"><u>You have choose..</u></h1><br>
+        </div>
+    <br>
+    <table border="3" align="center" class="table-danger">
+        {% for data in datas %}
+            <tr>
+                <td align="center">{{ data.id }}</td>
+                <td align="center">{{ data.book }}</td>
+                <td><a href="{% url 'edit' pk=data.id mode='plus' submit=0 %}" class="btn btn-warning btn-md" role="button">-</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'edit' pk=1 mode='none' submit=1 %}" class="btn btn-warning btn-md" role="button">Submit</a>
+
+
+    </div>
+
+
+
+
+{% endblock %}
