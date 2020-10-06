@@ -2,7 +2,7 @@
 This is the project on Library Management System build using django and postgresql database
 
 ## ER-Diagram
-![](image/ER-Diagram.png) ->This image is available in the image directory
+![](image/ER-Diagram.png)
 
 # How to use this project
 Install Python from here based on your platform : https://www.python.org/downloads/source/
@@ -15,7 +15,7 @@ Then download the PgAdmin here: https://www.pgadmin.org/download/.<br>
 After this open postgresql and install according to the step provided and make sure<br>
 that password you write is "dbms" without quote!.<br>
 Then open PgAdmin it will open in the browser and write the password, then click on create new Database
-![](image/create_database.png) ->This image is available in the image directory
+![](image/create_database.png)
 
 Name that database "Dbms2" without quote!.<br>
 Make sure that password for the database and it name is same as written above,
