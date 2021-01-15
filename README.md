@@ -27,7 +27,7 @@ Use this:
 ```
 or 
 ```
- >>> source ~/venv/bin/activate # for MacOS
+ >>> source ./venv/bin/activate # for MacOS
 ```
 then run below script :
 ```
